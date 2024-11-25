@@ -1,27 +1,55 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Blendercrush</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="favicon.png" />
-        <link rel="apple-touch-icon" href="favicon.png">
-        <meta name="apple-mobile-web-app-title" content="">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <script src="scripts.js" async defer></script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Ninja Blender Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Blender Container -->
+        <div id="blender-container">
+            <div id="blender">
+                <div id="blender-base">
+                    <div id="blender-blade"></div>
+                    <div id="blender-lid"></div>
+                </div>
+                <div id="blender-glass"></div>
+            </div>
+
+            <!-- Blender Control Buttons -->
+            <div id="buttons">
+                <button id="spawn-banana">Spawn Banana</button>
+                <button id="spawn-hammer">Spawn Hammer</button>
+                <button id="spawn-duck">Spawn Duck</button>
+                <button id="start-blender">Start Blender</button>
+                <button id="stop-blender">Stop Blender</button>
+                <button id="toggle-mode">Turbo Mode</button>
+            </div>
+        </div>
+
+        <!-- Object Area (Draggable Objects) -->
+        <div id="object-area">
+            <!-- Placeholder objects, they will spawn dynamically -->
+        </div>
+
+        <!-- Shop Section -->
+        <div id="shop">
+            <button id="shop-btn">Shop</button>
+            <div id="shop-items" style="display: none;">
+                <div class="shop-item">Super Blend - 50 Diamonds</div>
+                <div class="shop-item">Speed Up - 30 Diamonds</div>
+            </div>
+        </div>
+
+        <!-- Reward Display -->
+        <div id="rewards">
+            <p>Diamonds: <span id="diamonds">0</span></p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
 </html>

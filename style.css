@@ -1,3 +1,115 @@
-body{
-    background:red
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    overflow: hidden;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    height: 100vh;
+    position: relative;
+}
+
+#blender-container {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#blender {
+    width: 200px;
+    height: 400px;
+    background-color: #ddd;
+    position: relative;
+    border-radius: 8px;
+}
+
+#blender-base {
+    width: 100%;
+    height: 60px;
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+    border-radius: 8px;
+}
+
+#blender-blade {
+    width: 100%;
+    height: 10px;
+    background-color: #555;
+    position: absolute;
+    bottom: 40px;
+    border-radius: 4px;
+    transition: transform 0.2s ease-in-out;
+}
+
+#blender-lid {
+    width: 100%;
+    height: 30px;
+    background-color: #888;
+    position: absolute;
+    top: 0;
+    border-radius: 8px;
+}
+
+#blender-glass {
+    width: 100%;
+    height: 60%;
+    background-color: transparent;
+    position: absolute;
+    bottom: 60px;
+    border-radius: 0 0 8px 8px;
+    border: 2px solid #555;
+}
+
+#buttons button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#object-area {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#shop {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+}
+
+#shop-items {
+    margin-top: 10px;
+    display: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.shop-item {
+    margin-bottom: 10px;
+}
+
+#rewards {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    font-weight: bold;
 }
