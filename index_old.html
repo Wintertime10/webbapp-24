@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Ninja Blender Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Blender UI Container -->
+        <div id="blender-container">
+            <div id="blender">
+                <div id="blender-base">
+                    <div id="blender-blade"></div>
+                    <div id="blender-lid"></div>
+                </div>
+                <div id="blender-glass"></div>
+            </div>
+
+            <!-- Blender Control Buttons -->
+            <div id="buttons">
+                <button id="spawn-banana">Spawn Banana</button>
+                <button id="spawn-hammer">Spawn Hammer</button>
+                <button id="spawn-duck">Spawn Duck</button>
+                <button id="start-blender">Start Blender</button>
+                <button id="stop-blender">Stop Blender</button>
+                <button id="toggle-mode">Turbo Mode</button>
+            </div>
+        </div>
+
+        <!-- Shop Section -->
+        <div id="shop">
+            <button id="shop-btn">Shop</button>
+            <div id="shop-items" style="display: none;">
+                <div class="shop-item">Super Blend - 50 Diamonds</div>
+                <div class="shop-item">Speed Up - 30 Diamonds</div>
+            </div>
+        </div>
+
+        <!-- Reward Display -->
+        <div id="rewards">
+            <p>Diamonds: <span id="diamonds">0</span></p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
